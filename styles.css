@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Mono+One&display=swap');
+
+
+/* Resetando alguns estilos básicos */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais para o corpo da página */
+
+
+    * Estilos gerais */
+    body {
+        
+        background-color:rgb(248, 231, 72);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+    }
+    
+    /* Header */
+    header {
+        background:linear-gradient(to left, #e73a3a , rgb(59, 59, 206), #3498db );
+        background-size: 400% 100%;
+        text-align: center;
+        padding: 30px;
+        animation: degrade 10s linear infinite alternate;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
+        font-family: "Rubik Mono One", monospace;
+    }
+    p{
+    font-size: 1.2em;
+    
+    
+    }
+    @keyframes degrade{
+       0% {
+        background-position: 0%;
+        }
+        100%{
+        background-position: 400%;    
+        }
+    
+    
+    }
+
+
+
+
+
+
+
+
+
+
+/* Container comum para centralizar o conteúdo */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos para o cabeçalho (header) */
+header {
+    background-color: #333;
+    color: rgb(245, 242, 56);
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Estilos de navegação */
+nav {
+    background-color: #0c0c0c;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fac105fd;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #2dfc49;
+}
+
+/* Estilo para as seções */
+.content-section {
+    padding: 40px 0;
+    background-color: rgb(252, 177, 64);
+    margin: 20px 0;
+}
+
+.content-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* Estilos para o formulário de contato */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+form input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #4a6e3b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #13f10b;
+}
+
+/* Estilo do rodapé (footer) */
+footer {
+    background-color: #17446e;
+    color: rgb(237, 240, 62);
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+
+/*imagem responsivo*/
+
+
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .content-section {
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+}
+.tooltip {
+    position: relative; /* Para definir a posição do tooltip */
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 20;
+    left: 550px;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden; /* Inicialmente invisível */
+    width: 650px;
+    background-color: #702424;
+    color: #eeeaea;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    height: 130px;
+    font-size: 16px; /* Tamanho reduzido */
+    position: absolute;
+    z-index: 1;
+    bottom: -220%; /* Posiciona o tooltip acima do título */
+    left: 50%;
+    margin-left: 160px; /* Centraliza o tooltip */
+    opacity: 0;
+    transition: opacity 0.3s; /* Suaviza a transição */
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible; /* Torna o tooltip visível ao passar o mouse */
+    opacity: 1; /* Aumenta a opacidade para aparecer */
+  }
