@@ -207,7 +207,7 @@ footer {
     display: inline-block;
     cursor: pointer;
     margin-right: 20;
-    left: 300px;
+    left: 0px;
   }
   
   .tooltip .tooltiptext {
