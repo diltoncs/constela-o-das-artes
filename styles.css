@@ -179,7 +179,7 @@ footer {
 
 
 /* Estilos responsivos */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     nav ul {
         flex-direction: column;
     }
@@ -207,7 +207,7 @@ footer {
     display: inline-block;
     cursor: pointer;
     margin-right: 20;
-    left: 550px;
+    left: 300px;
   }
   
   .tooltip .tooltiptext {
