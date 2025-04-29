@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Mono+One&display=swap');
 
-
 /* Resetando alguns estilos básicos */
-
 * {
     margin: 0;
     padding: 0;
@@ -10,67 +8,25 @@
 }
 
 /* Estilos gerais para o corpo da página */
-
-
-    * Estilos gerais */
-    body {
-        
-        background-color:rgb(248, 231, 72);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 100vh;
-    }
-    
-    /* Header */
-    header {
-        background:linear-gradient(to left, #e73a3a , rgb(59, 59, 206), #3498db );
-        background-size: 400% 100%;
-        text-align: center;
-        padding: 30px;
-        animation: degrade 10s linear infinite alternate;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color:transparent;
-        font-family: "Rubik Mono One", monospace;
-    }
-    p{
-    font-size: 1.2em;
-    
-    
-    }
-    @keyframes degrade{
-       0% {
-        background-position: 0%;
-        }
-        100%{
-        background-position: 400%;    
-        }
-    
-    
-    }
-
-
-
-
-
-
-
-
-
-
-/* Container comum para centralizar o conteúdo */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+body {
+    background-color: rgb(248, 231, 72);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
 }
 
-/* Estilos para o cabeçalho (header) */
+/* Estilos do header */
 header {
-    background-color: #333;
-    color: rgb(245, 242, 56);
-    padding: 20px 0;
+    background: linear-gradient(to left, #e73a3a, rgb(59, 59, 206), #3498db);
+    background-size: 400% 100%;
     text-align: center;
+    padding: 30px;
+    animation: degrade 10s linear infinite alternate;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Rubik Mono One", monospace;
 }
 
 header h1 {
@@ -80,6 +36,16 @@ header h1 {
 
 header p {
     font-size: 1.2em;
+}
+
+/* Animação de degradação */
+@keyframes degrade {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
 }
 
 /* Estilos de navegação */
@@ -171,12 +137,11 @@ footer {
     text-align: center;
 }
 
-
-
-/*imagem responsivo*/
-
-
-
+/* Imagem responsiva */
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 /* Estilos responsivos */
 @media screen and (max-width: 768px) {
@@ -191,45 +156,63 @@ footer {
     .content-section {
         padding: 20px 0;
     }
-}
 
-@media (max-width: 480px) {
     header h1 {
         font-size: 2em;
     }
 
     header p {
-        font-size: 1em;
+        font-size: 1.1em;
     }
 }
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+
+    form input,
+    form button {
+        width: 90%;
+    }
+}
+
+/* Estilo para tooltip */
 .tooltip {
-    position: relative; /* Para definir a posição do tooltip */
+    position: relative;
     display: inline-block;
     cursor: pointer;
-    margin-right: 20;
-    left: 0px;
-  }
-  
-  .tooltip .tooltiptext {
-    visibility: hidden; /* Inicialmente invisível */
-    width: 650px;
+    margin-right: 20px;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
     background-color: #702424;
     color: #eeeaea;
     text-align: center;
     border-radius: 5px;
     padding: 5px;
-    height: 130px;
-    font-size: 16px; /* Tamanho reduzido */
+    font-size: 14px;
     position: absolute;
     z-index: 1;
-    bottom: -220%; /* Posiciona o tooltip acima do título */
-    left: 50%;
-    margin-left: 160px; /* Centraliza o tooltip */
+    bottom: -600%; /* Ajustado para exibir acima do elemento */
+    left: 60%;
+    margin-left: 50px; /* Centraliza o tooltip */
     opacity: 0;
-    transition: opacity 0.3s; /* Suaviza a transição */
-  }
-  
-  .tooltip:hover .tooltiptext {
-    visibility: visible; /* Torna o tooltip visível ao passar o mouse */
-    opacity: 1; /* Aumenta a opacidade para aparecer */
-  }
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
